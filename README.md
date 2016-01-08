@@ -45,4 +45,4 @@ The code provided here is based on PeeWee to establish the PostgreSQL connection
 
 More advanced queries are left as an exercise for the reader. Suffice it so say that the full-power of PostgreSQL is available and that query results on attributes are extremely fast provided that you create GIN indexes.
 
-It's pretty trivial to create REST interfaces for these models using [PostgREST](http://www.postgrest.com/). PostgREST even enables querying the JSONB attributes through HTTP query parameters.
+It's pretty trivial to create REST interfaces for these models using [PostgREST](http://postgrest.com/). PostgREST even enables querying the JSONB attributes through HTTP query parameters.
