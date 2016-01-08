@@ -8,7 +8,7 @@ There is considerable history to the development of the UForm going back to MIT'
 
 See [wikipedia](https://en.wikipedia.org/wiki/U-form) for more information on the U-form.
 
-The code provided here is based on PeeWee to establish the PostgreSQL connection, models, and attributes. This simplifies the code dramatically.
+The code provided here is based on [PeeWee](https://peewee.readthedocs.org/en/latest/) to establish the PostgreSQL connection, models, and attributes. This simplifies the code dramatically.
 
 ## Installation and Configuration
 
