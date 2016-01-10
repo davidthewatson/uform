@@ -12,7 +12,7 @@ class UForm(Model):
        eliminate data silos.
     """
     id = PrimaryKeyField()
-    uuid = UUIDField(default=uuid4)
+    uuid = UUIDField(default=uuid4)  # FIXME: move uuid initialization to PostgreSQL
     attrs = BinaryJSONField()
 
     @classmethod
