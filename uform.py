@@ -8,8 +8,8 @@ class UForm(Model):
        JSON datatype. PostgreSQL's Binary JSON enables the storage of key-value
        pairs tied to a UUID. See https://en.wikipedia.org/wiki/U-form
        Serial IDs are kept to provide query performance where UUIDs are not
-       required. UUIDs are provided in order to de-identify data from patient
-       demographics.
+       required. UUIDs are provided to guarantee identity universally and
+       eliminate data silos.
     """
     id = PrimaryKeyField()
     uuid = UUIDField(default=uuid4)
