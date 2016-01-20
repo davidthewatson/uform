@@ -6,19 +6,24 @@ The code provided here is based on [PeeWee](https://peewee.readthedocs.org/en/la
 
 ## Installation and Configuration
 
+0. Clone the repository:
+
+        https://github.com/davidthewatson/uform.git
+0. Change directories:
+
+        cd uform
+0. Make a virtualenv:
+
+        mkvirtualenv uform
 0. Install the python requirements:
 
         pip install -r requirements.txt
 0. Replace user variable with your postgres user in dog.py:
 
         db = PostgresqlExtDatabase('dogs', user='dwatson')
-0. Create the database:
+0. Create the database and enable hstore:
 
-        createdb dogs
-0. Enable the HSTORE extension:
-
-        \c dogs
-        create extension hstore;
+        ./create_db_and_enable_hstore.sh
 0. Run the script:
 
         python dog.py
