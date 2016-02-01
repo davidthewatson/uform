@@ -1,6 +1,5 @@
 from uform import UForm
 
-print(dir(UForm))
 Cats = UForm.add_derivative('cats')
 
 for c in [{'name': 'Keiko', 'age': 7},
