@@ -24,25 +24,22 @@ The code provided here is based on [PeeWee](https://peewee.readthedocs.org/en/la
 0. Install the python requirements:
 
         pip install -r requirements.txt
-0. Replace user variable with your postgres user in dog.py:
+0. Replace user variable with your postgres user in uform.py:
 
-        db = PostgresqlExtDatabase('dogs', user='dwatson')
-0. Create the database and enable hstore:
-
-        ./create_db_and_enable_hstore.sh
+        db = PostgresqlExtDatabase(name, user='dwatson')
 0. Run the script:
 
-        python dog.py
+        python example.py
 0. Examine the database:
 
-        SELECT * FROM dog;
+        SELECT * FROM cats;
         "id","uuid","attrs"
         1,"012E201B-83BF-45E0-AD92-7EA9FC768464","{\"age\": 7, \"name\": \"Keiko\"}"
         2,"3590BD6B-F2BB-406A-8E93-80EE17AFF13A","{\"age\": 13, \"name\": \"Goose\"}"
         3,"85D3E0A7-7C8F-4B67-94E7-E0568A2D8ED3","{\"age\": 11, \"name\": \"Maxwell\"}"
-0. Examine the attributes of a particular dog:
+0. Examine the attributes of a particular cat:
 
-        SELECT * FROM dog WHERE attrs->>'name' = 'Keiko';
+        SELECT * FROM cats WHERE attrs->>'name' = 'Keiko';
         "id","uuid","attrs"
         1,"012E201B-83BF-45E0-AD92-7EA9FC768464","{\"age\": 7, \"name\": \"Keiko\"}"
 
