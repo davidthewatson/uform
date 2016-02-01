@@ -1,24 +1,35 @@
 # UForm
 
-This is a novel implementation of the U-form abstract data type using PostgreSQL's JSONB Binary JSON field for attribute storage. The inspiration for the U-fom goes back to Michael Dertouzos [book](https://en.wikipedia.org/wiki/U-form#cite_note-1) which introduced the E-form. I did not invent the U-Form. I did work at MAYA Design where the U-Form was created. My hope is to keep the idea alive in Open Source Software. While there are many similar models now such as Entity-Attribute-Value (EAV) or Datomic's 5-tuple, few of these existed when the U-Form was created. See [wikipedia](https://en.wikipedia.org/wiki/U-form) for more information on the U-form.
+This is a novel implementation of the U-form abstract data type using PostgreSQL's JSONB Binary JSON field for attribute storage. 
+
+The inspiration for the U-fom goes back to Michael Dertouzos [book](https://en.wikipedia.org/wiki/U-form#cite_note-1) which introduced the E-form. I did not invent the U-Form. I did work at MAYA Design where the U-Form was created. 
+
+My hope is to keep the idea alive in Open Source Software. While there are many similar models now such as Entity-Attribute-Value (EAV) or Datomic's 5-tuple, few of these existed when the U-Form was created. 
+
+See [wikipedia](https://en.wikipedia.org/wiki/U-form) for more information on the U-form.
 
 The code provided here is based on [PeeWee](https://peewee.readthedocs.org/en/latest/) to establish the PostgreSQL connection, models, and attributes. This simplifies the code dramatically.
 
 ## Installation and Configuration
 
+0. Clone the repository:
+
+        https://github.com/davidthewatson/uform.git
+0. Change directories:
+
+        cd uform
+0. Make a virtualenv:
+
+        mkvirtualenv uform
 0. Install the python requirements:
 
         pip install -r requirements.txt
 0. Replace user variable with your postgres user in dog.py:
 
         db = PostgresqlExtDatabase('dogs', user='dwatson')
-0. Create the database:
+0. Create the database and enable hstore:
 
-        createdb dogs
-0. Enable the HSTORE extension:
-
-        \c dogs
-        create extension hstore;
+        ./create_db_and_enable_hstore.sh
 0. Run the script:
 
         python dog.py
