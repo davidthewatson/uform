@@ -1,10 +1,10 @@
 # UForm
 
-This is a novel implementation of the U-form abstract data type using PostgreSQL's JSONB Binary JSON field for attribute storage. 
+This is a novel implementation of the U-form abstract data type using PostgreSQL's JSONB Binary JSON field for attribute storage.
 
-The inspiration for the U-fom goes back to Michael Dertouzos [book](https://en.wikipedia.org/wiki/U-form#cite_note-1) which introduced the E-form. I did not invent the U-Form. I did work at MAYA Design where the U-Form was created. 
+The inspiration for the U-fom goes back to Michael Dertouzos [book](https://en.wikipedia.org/wiki/U-form#cite_note-1) which introduced the E-form. I did not invent the U-Form. I did work at MAYA Design where the U-Form was created.
 
-My hope is to keep the idea alive in Open Source Software. While there are many similar models now such as Entity-Attribute-Value (EAV) or Datomic's 5-tuple, few of these existed when the U-Form was created. 
+My hope is to keep the idea alive in Open Source Software. While there are many similar models now such as Entity-Attribute-Value (EAV) or Datomic's 5-tuple, few of these existed when the U-Form was created.
 
 See [wikipedia](https://en.wikipedia.org/wiki/U-form) for more information on the U-form.
 
@@ -48,3 +48,5 @@ The code provided here is based on [PeeWee](https://peewee.readthedocs.org/en/la
 More advanced queries are left as an exercise for the reader. Suffice it so say that the full power of PostgreSQL is available and that query results on attributes are extremely fast provided that you create GIN indexes.
 
 It's trivial to create REST interfaces for these models using [PostgREST](http://postgrest.com/). PostgREST even enables querying the JSONB attributes through HTTP query parameters.
+
+[David Watson](http://davidwatson.org/)
